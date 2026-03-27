@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Sreya ❤️</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #050505, #111111, #1a0f18);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08), transparent 25%),
+        radial-gradient(circle at 80% 30%, rgba(255, 20, 147, 0.18), transparent 30%),
+        radial-gradient(circle at 50% 80%, rgba(255,105,180,0.08), transparent 25%);
+      animation: bgMove 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes bgMove {
+      from { transform: scale(1) translateY(0); }
+      to { transform: scale(1.08) translateY(-12px); }
+    }
+
+    .card {
+      position: relative;
+      z-index: 2;
+      width: min(92vw, 760px);
+      padding: 42px 28px;
+      border-radius: 30px;
+      text-align: center;
+      background: rgba(18, 18, 18, 0.78);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 20px 60px rgba(255, 20, 147, 0.18);
+      animation: popIn 1.1s ease;
+    }
+
+    @keyframes popIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.88) translateY(25px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    .mini {
+      font-size: 1rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #ff77b7;
+      margin-bottom: 12px;
+    }
+
+    .hearts {
+      font-size: 1.8rem;
+      margin-bottom: 14px;
+      animation: pulse 1.7s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 6vw, 4.2rem);
+      color: #ffffff;
+      margin-bottom: 16px;
+      text-shadow: 0 0 14px rgba(255,255,255,0.35), 0 0 35px rgba(255, 20, 147, 0.28);
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 14px rgba(255,255,255,0.35), 0 0 35px rgba(255, 20, 147, 0.28);
+      }
+      to {
+        text-shadow: 0 0 20px rgba(255,255,255,0.55), 0 0 50px rgba(255, 20, 147, 0.42);
+      }
+    }
+
+    .message {
+      color: #ffeaf4;
+      font-size: clamp(1rem, 2.3vw, 1.22rem);
+      line-height: 1.9;
+      max-width: 620px;
+      margin: 0 auto 26px;
+      animation: fadeUp 1.4s ease;
+    }
+
+    .highlight {
+      display: inline-block;
+      padding: 3px 12px;
+      border-radius: 999px;
+      background: rgba(255, 119, 183, 0.16);
+      color: #ff9ccc;
+      font-weight: bold;
+    }
+
+    .quote {
+      margin: 20px auto 28px;
+      max-width: 560px;
+      padding: 18px 20px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.06);
+      color: #fff0f7;
+      font-size: clamp(1rem, 2.2vw, 1.2rem);
+      line-height: 1.8;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 10px 28px rgba(255, 20, 147, 0.12);
+    }
+
+    .btn {
+      border: none;
+      padding: 14px 30px;
+      border-radius: 999px;
+      background: #ff4f98;
+      color: white;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.25s ease;
+      box-shadow: 0 12px 24px rgba(255, 20, 147, 0.2);
+    }
+
+    .btn:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 16px 30px rgba(255, 20, 147, 0.3);
+    }
+
+    .reveal {
+      min-height: 34px;
+      margin-top: 18px;
+      color: #ffd9ea;
+      font-size: 1.08rem;
+      font-weight: 600;
+    }
+
+    .footer {
+      margin-top: 18px;
+      color: #f5cfe0;
+      opacity: 0.95;
+      font-size: 0.95rem;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .heart {
+      position: absolute;
+      bottom: -40px;
+      font-size: 22px;
+      color: rgba(255, 120, 190, 0.95);
+      animation: floatUp linear infinite;
+      user-select: none;
+      pointer-events: none;
+      z-index: 1;
+      text-shadow: 0 0 12px rgba(255, 20, 147, 0.25);
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(0.8) rotate(0deg);
+        opacity: 0;
+      }
+      15% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-115vh) scale(1.4) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: rgba(255,255,255,0.75);
+      border-radius: 50%;
+      box-shadow: 0 0 14px rgba(255,255,255,0.85);
+      animation: twinkle 2.8s infinite ease-in-out;
+      z-index: 1;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; transform: scale(0.5); }
+      50% { opacity: 1; transform: scale(1.4); }
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 32px 18px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+
+  <div class="card">
+    <div class="hearts">💖 💕 ❤️ 💗 💞</div>
+    <div class="mini">A little message</div>
+    <h1>For Sreya ✨</h1>
+
+    <p class="message">
+      Hey <span class="highlight">Sreya</span>,<br><br>
+      I made this little page just to tell you something in a sweet and simple way 💗<br>
+      Sometimes one person becomes a little more special than everyone else… and for me, that feels like <span class="highlight">you</span>.
+    </p>
+
+    <div class="quote" id="mainQuote">
+      You are my <span class="highlight">bromine</span>…<br>
+      because out of everyone,
+      you are the one who feels different to me ❤️
+    </div>
+
+    <button class="btn" onclick="showReveal()">Click here 💌</button>
+    <div class="reveal" id="reveal"></div>
+    <div class="footer">Made with lots of hearts for someone special 💝</div>
+  </div>
+
+  <script>
+    const reveals = [
+      "I just wanted you to know… you mean a little more to me than just a normal friend ❤️",
+      "Maybe this is my indirect way of saying that you’re really special to me 💖",
+      "Out of everyone, you’re the one who stays on my mind the most ✨",
+      "You are my bromine, Sreya 💕"
+    ];
+
+    function showReveal() {
+      const box = document.getElementById('reveal');
+      const text = reveals[Math.floor(Math.random() * reveals.length)];
+      box.innerHTML = text;
+    }
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      const symbols = ['💖', '💕', '❤️', '💗'];
+      heart.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = (16 + Math.random() * 26) + 'px';
+      heart.style.animationDuration = (4 + Math.random() * 5) + 's';
+      heart.style.opacity = Math.random();
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 9000);
+    }
+
+    setInterval(createHeart, 260);
+
+    function createSparkles() {
+      for (let i = 0; i < 24; i++) {
+        const sparkle = document.createElement('div');
+        sparkle.classList.add('sparkle');
+        sparkle.style.left = Math.random() * 100 + 'vw';
+        sparkle.style.top = Math.random() * 100 + 'vh';
+        sparkle.style.animationDelay = Math.random() * 3 + 's';
+        sparkle.style.animationDuration = (1.8 + Math.random() * 2.2) + 's';
+        document.body.appendChild(sparkle);
+      }
+    }
+
+    createSparkles();
+  </script>
+</body>
+</html>
